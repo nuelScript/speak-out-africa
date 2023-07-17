@@ -20,7 +20,7 @@ const BannerOne = () => {
                 Contact Us
               </button>
             </Link>
-            <Link href={"/aboutUs"} passHref>
+            <Link href={"/about"} passHref>
               <button className="ml-4 rounded-full border border-white bg-transparent px-8 py-4 font-semibold uppercase text-white hover:scale-110 hover:opacity-70">
                 Learn More
               </button>
