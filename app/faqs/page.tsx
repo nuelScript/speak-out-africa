@@ -16,10 +16,12 @@ const Faqs = () => {
       <Banner title="FAQS" />
       <div className="flex h-full w-full flex-col gap-8 p-28">
         <div className="ml-2 flex flex-col">
-          <h1 className="text-sm font-semibold uppercase text-gray-400">
+          <h1 className="text-center text-sm font-semibold uppercase text-gray-400 sm:text-left lg:text-left">
             Frequently Asked Questions
           </h1>
-          <h3 className="text-6xl font-bold">Have any questions?</h3>
+          <h3 className="text-center text-6xl font-bold sm:text-left lg:text-left">
+            Have any questions?
+          </h3>
         </div>
         <Accordion
           type="single"

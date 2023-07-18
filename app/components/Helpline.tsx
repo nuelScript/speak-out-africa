@@ -13,19 +13,31 @@ const HelpLine = () => {
         <p>(+234)915-199-6062</p>
       </div>
       <div className="inline-flex w-fit flex-row justify-between [&>*]:mx-2">
-        <Link href={"/"}>
+        <Link
+          href={
+            "/https://www.facebook.com/profile.php?id=100091230700459&mibextid=ZbWKwL"
+          }
+        >
           <BiLogoFacebookSquare
             size={20}
             className="text-white hover:opacity-70"
           />
         </Link>
-        <Link href={"/"}>
+        <Link
+          href={
+            "/https://instagram.com/speakoutafricaorganisation?igshid=MzRlODBiNWFlZA=="
+          }
+        >
           <AiOutlineInstagram
             size={20}
             className="text-white hover:opacity-70"
           />
         </Link>
-        <Link href={"/"}>
+        <Link
+          href={
+            "/https://www.linkedin.com/company/speakout-africa-organisation/"
+          }
+        >
           <FaLinkedin size={20} className="text-white hover:opacity-70" />
         </Link>
       </div>

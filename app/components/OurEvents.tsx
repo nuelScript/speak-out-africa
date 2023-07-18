@@ -9,7 +9,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 const OurEvents = () => {
   return (
     <div className="flex w-full justify-center">
-      <div className="flex w-[1400px] flex-col gap-8 bg-[#F5F2F0] px-4 py-20">
+      <div className="flex w-[1400px] flex-col gap-8 bg-[#F5F2F0] py-20">
         <h1 className="text-sm font-bold uppercase text-gray-400">
           Our Events
         </h1>

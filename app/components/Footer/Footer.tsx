@@ -115,13 +115,28 @@ const Footer = ({ className }: FooterProps) => {
           </p>
           <Separator className="mb-8 w-11/12 bg-neutral-400" />
           <div className="inline-flex">
-            <Link href={"/"} passHref>
+            <Link
+              href={
+                "/https://www.linkedin.com/company/speakout-africa-organisation/"
+              }
+              passHref
+            >
               <AiOutlineLinkedin className="h-6 w-6 text-white hover:opacity-70" />
             </Link>
-            <Link href={"/"} passHref>
+            <Link
+              href={
+                "/https://www.facebook.com/profile.php?id=100091230700459&mibextid=ZbWKwL"
+              }
+              passHref
+            >
               <PiFacebookLogoBold className="ml-8 h-6 w-6 text-white hover:opacity-70" />
             </Link>
-            <Link href={"/"} passHref>
+            <Link
+              href={
+                "/https://instagram.com/speakoutafricaorganisation?igshid=MzRlODBiNWFlZA=="
+              }
+              passHref
+            >
               <AiOutlineInstagram className="ml-8 h-6 w-6 text-white hover:opacity-70" />
             </Link>
           </div>
