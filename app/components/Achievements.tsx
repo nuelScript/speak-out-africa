@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import CountUp from "react-countup";
 import { BsHeart } from "react-icons/bs";
 import { HiOutlineThumbUp } from "react-icons/hi";
 import { IoIosPeople } from "react-icons/io";
 
 const Achievements = () => {
-  const [counter, setCounter] = useState(false);
   return (
     <div className="flex w-full justify-center bg-[#DC0A00] p-12 text-white">
       <div className="flex items-center justify-between gap-x-80">
