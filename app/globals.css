@@ -8,9 +8,6 @@ body,
   height: 100%;
 }
 
-.num {
-  color: #fff;
-}
 
 @layer base {
   :root {

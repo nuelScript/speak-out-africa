@@ -14,8 +14,9 @@ const HelpLine = () => {
       </div>
       <div className="inline-flex w-fit flex-row justify-between [&>*]:mx-2">
         <Link
+          target="_blank"
           href={
-            "/https://www.facebook.com/profile.php?id=100091230700459&mibextid=ZbWKwL"
+            "https://www.facebook.com/profile.php?id=100091230700459&mibextid=ZbWKwL"
           }
         >
           <BiLogoFacebookSquare
@@ -24,8 +25,9 @@ const HelpLine = () => {
           />
         </Link>
         <Link
+          target="_blank"
           href={
-            "/https://instagram.com/speakoutafricaorganisation?igshid=MzRlODBiNWFlZA=="
+            "https://instagram.com/speakoutafricaorganisation?igshid=MzRlODBiNWFlZA=="
           }
         >
           <AiOutlineInstagram
@@ -34,8 +36,9 @@ const HelpLine = () => {
           />
         </Link>
         <Link
+          target="_blank"
           href={
-            "/https://www.linkedin.com/company/speakout-africa-organisation/"
+            "https://www.linkedin.com/company/speakout-africa-organisation/"
           }
         >
           <FaLinkedin size={20} className="text-white hover:opacity-70" />
