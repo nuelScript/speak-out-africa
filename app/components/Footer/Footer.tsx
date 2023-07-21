@@ -59,18 +59,20 @@ const Footer = ({ className }: FooterProps) => {
   return (
     <div
       className={twMerge(
-        "flex min-h-full w-screen flex-col bg-neutral-600 px-20 py-6 text-white",
+        "flex min-w-full flex-col bg-neutral-600 px-10 py-6 text-white sm:px-12 md:px-16 lg:px-20",
         className
       )}
     >
-      <div className="mb-8 flex h-2/5 w-full items-center justify-between">
-        <div className="flex w-1/2 flex-col">
-          <h1 className="text-2xl font-semibold">NewsLetter</h1>
-          <p className="text-base">
+      <div className="mb-8 flex h-2/5 w-full flex-col items-center justify-between sm:flex-row md:flex-row lg:flex-row">
+        <div className="mb-8 flex w-full flex-col items-center sm:mb-0 sm:w-1/2 sm:items-start md:mb-0 md:w-1/2 md:items-start lg:mb-0 lg:w-1/2 lg:items-start">
+          <h1 className="mb-2 text-2xl font-semibold sm:mb-0 md:mb-0 lg:mb-0">
+            NewsLetter
+          </h1>
+          <p className="text-center text-base sm:text-start md:text-start lg:text-start">
             Signup for regular newsletter and stay up to date
           </p>
         </div>
-        <div className="w-1/2">
+        <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2">
           <Form {...form}>
             <form
               className="flex w-full items-center justify-center"
@@ -86,7 +88,7 @@ const Footer = ({ className }: FooterProps) => {
                         type="text"
                         id="Name"
                         placeholder="Your email address"
-                        className="w-[20vw] rounded-s-full border-none px-4 py-2 text-base text-black outline-none"
+                        className="w-[60vw] rounded-s-full border-none px-4 py-2 text-base text-black outline-none sm:w-[20vw] md:w-[20vw] lg:w-[20vw]"
                         {...field}
                       />
                     </FormControl>
@@ -103,49 +105,54 @@ const Footer = ({ className }: FooterProps) => {
           </Form>
         </div>
       </div>
-      <Separator className="bg-neutral-400" />
-      <div className="mb-4 mt-10 flex h-3/5 justify-between">
-        <div className="flex w-1/2 flex-col items-start">
+      <Separator className="bg-neutral-400 " />
+      <div className="mb-4 mt-10 flex flex-col justify-between sm:h-3/5 sm:flex-row md:h-3/5 md:flex-row lg:h-3/5 lg:flex-row">
+        <div className="flex w-full flex-col items-center gap-x-2 sm:w-1/2 sm:items-start sm:gap-x-0 md:w-1/2 md:items-start md:gap-x-0 lg:w-1/2 lg:items-start lg:gap-x-0">
           <Logo className="" />
-          <p className="mb-4 w-[65%] text-base">
+          <p className="mb-4 w-full text-center text-base sm:w-[75%] sm:text-left md:w-[70%] md:text-left lg:w-[65%] lg:text-left ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             expedita at alias dolorem, quae corrupti blanditiis enim eius porro
             esse commodi maxime repellat ullam est aliquam pariatur aut cumque
             maiores.
           </p>
-          <Separator className="mb-8 w-11/12 bg-neutral-400" />
-          <div className="inline-flex">
-            <Link
-              target="_blank"
-              href={
-                "https://www.linkedin.com/company/speakout-africa-organisation/"
-              }
-              passHref
-            >
-              <AiOutlineLinkedin className="h-6 w-6 text-white hover:opacity-70" />
-            </Link>
-            <Link
-              target="_blank"
-              href={
-                "https://www.facebook.com/profile.php?id=100091230700459&mibextid=ZbWKwL"
-              }
-              passHref
-            >
-              <PiFacebookLogoBold className="ml-8 h-6 w-6 text-white hover:opacity-70" />
-            </Link>
-            <Link
-              target="_blank"
-              href={
-                "https://instagram.com/speakoutafricaorganisation?igshid=MzRlODBiNWFlZA=="
-              }
-              passHref
-            >
-              <AiOutlineInstagram className="ml-8 h-6 w-6 text-white hover:opacity-70" />
-            </Link>
+          <div className="flex w-full flex-col-reverse items-center sm:flex-col sm:items-start md:flex-col md:items-start lg:flex-col lg:items-start">
+            <Separator className="mb-8 w-full bg-neutral-400 sm:w-11/12 md:w-11/12 lg:w-11/12" />
+            <div className="mb-8 inline-flex sm:mb-0 md:mb-0 lg:mb-0">
+              <Link
+                target="_blank"
+                href={
+                  "https://www.linkedin.com/company/speakout-africa-organisation/"
+                }
+                passHref
+              >
+                <AiOutlineLinkedin className="h-8 w-8 text-white hover:opacity-70 sm:h-6 sm:w-6 md:h-6 md:w-6 lg:h-6 lg:w-6" />
+              </Link>
+              <Link
+                target="_blank"
+                href={
+                  "https://www.facebook.com/profile.php?id=100091230700459&mibextid=ZbWKwL"
+                }
+                passHref
+              >
+                <PiFacebookLogoBold className="ml-8 h-8 w-8 text-white hover:opacity-70 sm:h-6 sm:w-6 md:h-6 md:w-6 lg:h-6 lg:w-6" />
+              </Link>
+              <Link
+                target="_blank"
+                href={
+                  "https://instagram.com/speakoutafricaorganisation?igshid=MzRlODBiNWFlZA=="
+                }
+                passHref
+              >
+                <AiOutlineInstagram className="ml-8 h-8 w-8 text-white hover:opacity-70 sm:h-6 sm:w-6 md:h-6 md:w-6 lg:h-6 lg:w-6" />
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="mt-4 flex h-full w-1/2 items-start justify-between">
-          <SectionList title="Quick Link" className="w-1/2">
+        <div className="flex h-1/3 w-full flex-col items-center justify-between sm:mt-4 sm:h-full sm:w-1/2 sm:flex-row sm:items-start md:mt-4 md:h-full md:w-1/2 md:flex-row md:items-start lg:mt-4 lg:h-full lg:w-1/2 lg:flex-row lg:items-start">
+          <SectionList
+            title="Quick Link"
+            className="flex flex-col items-start sm:w-1/2 sm:items-start md:w-1/2 md:items-start lg:w-1/2 lg:items-start"
+          >
             <Link className="hover:opacity-70" href={"/about"}>
               <BsArrowRightShort size={25} className="mb-1 mr-2 inline-block" />
               About Us
@@ -171,12 +178,15 @@ const Footer = ({ className }: FooterProps) => {
               Recent Events
             </Link>
           </SectionList>
-          <SectionList title="Organisational Info" className="w-1/2">
+          <SectionList
+            title="Organisational Info"
+            className="flex flex-col items-center sm:w-1/2 sm:items-start md:w-1/2 md:items-start lg:w-1/2 lg:items-start"
+          >
             <p className="mb-8">
               <BsTelephone size={25} className="mr-4 inline-flex text-white" />
               <span>(+234)915-199-6062</span>
             </p>
-            <p className="">
+            <p className="w-[70%] sm:w-full md:w-full lg:w-full">
               <HiOutlineLocationMarker
                 size={25}
                 className="mr-4 inline-flex text-white"

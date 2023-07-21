@@ -1,8 +1,6 @@
 "use client";
+
 import React from "react";
-// import { useState } from "react";
-// import { RiArrowDropDownLine } from "react-icons/ri";
-// import MenuItem from "./MenuItem";
 import Link from "next/link";
 import { ListItem } from "@/components/ui/listItem";
 import {
@@ -14,6 +12,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const aboutUs: { title: string; href: string }[] = [
   {
@@ -73,232 +77,172 @@ const contactUs: { title: string; href: string }[] = [
 
 const UserMenu = () => {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Home
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
-              {aboutUs.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                ></ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Programmes</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
-              {programmes.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                ></ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="">Updates</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
-              {updates.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                ></ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
-              {contactUs.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                ></ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/donation" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Donate
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <div>
+      <NavigationMenu className="hidden min-[1000px]:inline-flex ">
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Home
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                {aboutUs.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  ></ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Programmes</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                {programmes.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  ></ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="">Updates</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                {updates.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  ></ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                {contactUs.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  ></ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/donation" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Donate
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+      <Sheet>
+        <SheetTrigger asChild className="min-[1000px]:hidden">
+          <div className="group flex h-5 w-6 cursor-pointer flex-col items-center justify-between overflow-hidden text-4xl text-white min-[1000px]:hidden">
+            <span className="inline-flex h-[2px] w-full transform bg-white transition-all duration-300 ease-in-out group-hover:translate-x-2 group-hover:bg-[#D90A01] group-active:bg-[#D90A01]"></span>
+            <span className="group-focus: inline-flex h-[2px] w-full translate-x-3 transform bg-white transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:bg-[#D90A01] group-active:bg-[#D90A01]"></span>
+            <span className="inline-flex h-[2px] w-full translate-x-1 transform bg-white transition-all duration-300 ease-in-out group-hover:translate-x-3 group-hover:bg-[#D90A01] group-active:bg-[#D90A01]"></span>
+          </div>
+        </SheetTrigger>
+        <SheetContent side="top" className="flex justify-center bg-black">
+          <NavigationMenu className="min-[1000px]:hidden">
+            <NavigationMenuList className="flex-col gap-y-8">
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <SheetClose className="uppercase">Home</SheetClose>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
+                <NavigationMenuContent className="">
+                  <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                    <SheetClose className="uppercase">
+                      {aboutUs.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href={component.href}
+                        ></ListItem>
+                      ))}
+                    </SheetClose>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Programmes</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                    {programmes.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      ></ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="">
+                  Updates
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                    {updates.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      ></ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] grid-cols-1 gap-3 p-4 md:w-[450px] lg:w-[500px]">
+                    {contactUs.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      ></ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/donation" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Donate
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </SheetContent>
+      </Sheet>
+    </div>
   );
-  // const [aboutUs, setAboutUs] = useState(false);
-  // const [programmes, setProgrammes] = useState(false);
-  // const [updates, setUpdates] = useState(false);
-  // const [contactUs, setContactUs] = useState(false);
-  // return (
-  //   <div className="hidden items-center gap-8 text-white md:inline-flex">
-  //     <ul className="flex gap-8 text-[13px]">
-  //       <Link
-  //         href="/"
-  //         className="flex cursor-pointer items-center text-base font-semibold uppercase"
-  //         passHref
-  //       >
-  //         <li>Home</li>
-  //       </Link>
-  //       <li
-  //         onClick={() => setAboutUs(!aboutUs)}
-  //         className="relative flex cursor-pointer items-center text-base font-semibold uppercase "
-  //       >
-  //         About Us{" "}
-  //         <span>
-  //           <RiArrowDropDownLine
-  //             className={`${
-  //               aboutUs
-  //                 ? "rotate-0 text-[#DC0A00] transition"
-  //                 : "rotate-180 text-white transition"
-  //             }`}
-  //             size={40}
-  //           />
-  //           {aboutUs && (
-  //             <div className="absolute left-0 top-[168%] overflow-hidden text-sm">
-  //               <div className="flex w-fit cursor-pointer flex-col items-center">
-  //                 <>
-  //                   <MenuItem className="block" href="/">
-  //                     Who we are
-  //                   </MenuItem>
-  //                   <MenuItem className="block" href="/">
-  //                     Our Services
-  //                   </MenuItem>
-  //                 </>
-  //               </div>
-  //             </div>
-  //           )}
-  //         </span>
-  //       </li>
-  //       <li
-  //         onClick={() => setProgrammes(!programmes)}
-  //         className="relative flex cursor-pointer items-center text-base font-semibold uppercase"
-  //       >
-  //         Programmes{" "}
-  //         <span>
-  //           <RiArrowDropDownLine
-  //             className={`${
-  //               programmes
-  //                 ? "rotate-0 text-[#DC0A00] transition"
-  //                 : "rotate-180 text-white transition"
-  //             }`}
-  //             size={40}
-  //           />
-  //         </span>
-  //         {programmes && (
-  //           <div className="absolute left-0 top-[168%] overflow-hidden text-sm">
-  //             <div className="flex w-fit cursor-pointer flex-col items-center">
-  //               <>
-  //                 <MenuItem className="block" href="/">
-  //                   Our Campaigns
-  //                 </MenuItem>
-  //                 <MenuItem className="block" href="/">
-  //                   Events
-  //                 </MenuItem>
-  //                 <MenuItem className="block" href="/gallery">
-  //                   Gallery
-  //                 </MenuItem>
-  //               </>
-  //             </div>
-  //           </div>
-  //         )}
-  //       </li>
-  //       <li
-  //         onClick={() => setUpdates(!updates)}
-  //         className="relative flex cursor-pointer items-center text-base font-semibold uppercase"
-  //       >
-  //         Updates{" "}
-  //         <span>
-  //           <RiArrowDropDownLine
-  //             className={`${
-  //               updates
-  //                 ? "rotate-0 text-[#DC0A00] transition"
-  //                 : "rotate-180 text-white transition"
-  //             }`}
-  //             size={40}
-  //           />
-  //         </span>
-  //         {updates && (
-  //           <div className="absolute left-0 top-[168%] overflow-hidden text-xs">
-  //             <div className="flex w-fit cursor-pointer flex-col items-center">
-  //               <>
-  //                 <MenuItem className="block" href="/">
-  //                   News & Articles
-  //                 </MenuItem>
-  //                 <MenuItem className="block" href="/">
-  //                   Our Store
-  //                 </MenuItem>
-  //                 <MenuItem className="block" href="/faqs">
-  //                   FAQS
-  //                 </MenuItem>
-  //               </>
-  //             </div>
-  //           </div>
-  //         )}
-  //       </li>
-  //       <li
-  //         onClick={() => setContactUs(!contactUs)}
-  //         className="relative flex cursor-pointer items-center text-base font-semibold uppercase"
-  //       >
-  //         Contact Us{" "}
-  //         <span>
-  //           <RiArrowDropDownLine
-  //             className={`${
-  //               contactUs
-  //                 ? "rotate-0 text-[#DC0A00] transition"
-  //                 : "rotate-180 text-white transition"
-  //             }`}
-  //             size={40}
-  //           />
-  //         </span>
-  //         {contactUs && (
-  //           <div className="absolute left-0 top-[168%] overflow-hidden text-xs">
-  //             <div className="flex w-fit cursor-pointer flex-col items-center">
-  //               <>
-  //                 <MenuItem className="block" href="/contact">
-  //                   Contact
-  //                 </MenuItem>
-  //                 <MenuItem className="block" href="/joinUs">
-  //                   Join us
-  //                 </MenuItem>
-  //                 <MenuItem className="block" href="/donation">
-  //                   Donate
-  //                 </MenuItem>
-  //               </>
-  //             </div>
-  //           </div>
-  //         )}
-  //       </li>
-  //     </ul>
-  //     <Link href={"/donation"} passHref>
-  //       <button className="rounded-full bg-[#D90A01] px-8 py-3 text-sm font-medium uppercase text-white hover:bg-rose-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-  //         Donate
-  //       </button>
-  //     </Link>
-  //   </div>
-  // );
 };
 
 export default UserMenu;

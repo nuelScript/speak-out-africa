@@ -17,7 +17,7 @@ import SupportUs from "./components/SupportUs";
 
 export default function Home() {
   return (
-    <div className="min-h-full w-full bg-white">
+    <div className="min-h-full min-w-full bg-white">
       <BannerOne />
       <WhoWeAre />
       <OurServices />
@@ -28,7 +28,7 @@ export default function Home() {
       <Search />
       <OurCommunity />
       <Faq />
-      <JoinUs className="px-[16.5rem]" description="Become a Volunteer" />
+      <JoinUs className="lg:px-[16.5rem]" description="Become a Volunteer" />
       <Blogs />
       <SupportUs className="mt-28" />
       <Footer />

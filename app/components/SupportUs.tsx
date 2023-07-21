@@ -15,10 +15,12 @@ const SupportUs = ({ className }: SupportUsProps) => {
         className
       )}
     >
-      <h3 className="text-sm font-semibold uppercase text-gray-500">
+      <h3 className="text-xl font-semibold uppercase text-gray-500 sm:text-lg md:text-sm lg:text-sm">
         Support Us
       </h3>
-      <h1 className="text-6xl font-bold">How You Can Help</h1>
+      <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-6xl">
+        How You Can Help
+      </h1>
       <div className="flex gap-6">
         <Link href={"/donation"} passHref>
           <button

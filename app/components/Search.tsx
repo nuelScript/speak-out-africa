@@ -27,7 +27,7 @@ const Search = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   return (
-    <div className="flex w-full justify-center gap-8 bg-neutral-600 p-20">
+    <div className="hidden w-full justify-center gap-8 bg-neutral-600 p-20 sm:hidden md:flex lg:flex ">
       <BiSearch className="inline-flex h-32 w-32 text-white" />
       <div className="flex w-1/2 flex-col gap-y-8">
         <h1 className="text-4xl font-bold tracking-normal text-white">

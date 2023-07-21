@@ -1,4 +1,6 @@
-export default function handler(req: any, res: any) {
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.log(req.body);
     res.send(200);
 }

@@ -13,7 +13,7 @@ const Sections = ({ image, className }: SectionsProps) => {
   return (
     <div
       className={twMerge(
-        "flex w-[360px] flex-col items-center rounded-tr-[100px]",
+        "flex w-[280px] flex-col items-center rounded-tr-[100px] sm:w-[300px] md:w-[320px] lg:w-[360px]",
         className
       )}
     >
