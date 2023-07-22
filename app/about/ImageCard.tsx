@@ -8,7 +8,7 @@ interface ImageCardProps {
 
 const ImageCard = ({ image, name }: ImageCardProps) => {
   return (
-    <div className="flex w-[360px] flex-col items-center gap-y-4">
+    <div className="flex w-[360px] flex-col items-center gap-y-4 hover:scale-110 xl:hover:scale-105">
       <Image
         src={image}
         alt={name}

@@ -4,12 +4,12 @@ import React from "react";
 
 const OurPartners = () => {
   return (
-    <div className="my-40 flex w-full flex-col items-center gap-y-8">
-      <h1 className="text-sm font-bold uppercase text-gray-400">
+    <div className="my-20 flex w-full flex-col items-center gap-y-8 xl:my-40">
+      <h1 className="text-xl font-bold uppercase text-gray-400 xl:text-sm">
         Our Partners
       </h1>
-      <h3 className="text-5xl font-bold">Meet Our Partners</h3>
-      <div className="flex w-full justify-center gap-56">
+      <h3 className="text-3xl font-bold xl:text-5xl">Meet Our Partners</h3>
+      <div className="flex w-full flex-col items-center justify-center gap-32 xl:flex-row xl:items-start xl:gap-56">
         <Image
           src={Unicef1}
           alt="UNICEF"
