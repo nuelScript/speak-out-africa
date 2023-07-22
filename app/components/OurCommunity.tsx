@@ -21,11 +21,11 @@ const OurCommunity = () => {
         <h1 className="px-4 text-center text-xl font-bold uppercase text-gray-400 sm:px-4 sm:text-center sm:text-lg md:px-4 md:text-center md:text-sm lg:px-4 lg:text-left lg:text-sm">
           Our Community
         </h1>
-        <h3 className="px-4 text-center text-3xl font-bold leading-tight sm:px-4 sm:text-center sm:text-4xl md:px-4 md:text-center md:text-5xl lg:px-4 lg:text-left lg:text-6xl">
+        <h3 className="px-4 text-center text-3xl font-bold leading-tight sm:px-4 sm:text-center sm:text-4xl md:px-4 md:text-center md:text-5xl lg:px-4 lg:text-center lg:text-6xl">
           We Comprise Of Skilled And Passionate Members
         </h3>
-        <div className="flex flex-row gap-y-8 sm:flex-row md:flex-row lg:flex-col">
-          <div className="flex w-full flex-col sm:flex-col md:flex-col lg:flex-row">
+        <div className="flex flex-row gap-y-8 sm:flex-row md:flex-row 2xl:flex-col">
+          <div className="flex w-full flex-col sm:flex-col md:flex-col 2xl:flex-row">
             <Image
               src={Team1}
               alt="Person1"
@@ -47,7 +47,7 @@ const OurCommunity = () => {
               className="transition hover:scale-105 hover:cursor-pointer"
             />
           </div>
-          <div className="flex w-full flex-col sm:flex-col md:flex-col lg:flex-row">
+          <div className="flex w-full flex-col sm:flex-col md:flex-col 2xl:flex-row">
             <Image
               src={Team5}
               alt="Person5"
