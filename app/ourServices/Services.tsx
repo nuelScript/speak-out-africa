@@ -17,12 +17,12 @@ const Services = ({ className }: ServicesProps) => {
     <div
       className={twMerge("flex w-full flex-col items-center py-16", className)}
     >
-      <p className="mb-2 text-sm font-semibold uppercase text-neutral-500">
+      <p className="mb-8 text-xl font-bold uppercase text-neutral-500 xl:mb-2 xl:text-sm xl:font-semibold">
         Our Services
       </p>
-      <h1 className="text-5xl font-bold">What we Do</h1>
-      <div className="mt-8 grid w-3/4 auto-rows-fr grid-cols-3 gap-y-20 px-12">
-        <div className="flex w-[360px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px]">
+      <h1 className="text-4xl font-bold xl:text-5xl">What we Do</h1>
+      <div className="mt-8 grid w-full auto-rows-fr grid-cols-1 place-items-center gap-y-20 px-8 md:grid-cols-2 lg:grid-cols-2 xl:w-3/4 2xl:grid-cols-3 2xl:place-items-start 2xl:px-12">
+        <div className="flex w-[300px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px] xl:w-[360px]">
           <Image
             src={dummypicture1}
             alt="1"
@@ -38,7 +38,7 @@ const Services = ({ className }: ServicesProps) => {
             assumenda blanditiis officia dolorum sequi excepturi rem obcaecati
           </p>
         </div>
-        <div className="flex w-[360px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px]">
+        <div className="flex w-[300px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px] xl:w-[360px]">
           <Image
             src={dummypicture2}
             alt="1"
@@ -54,7 +54,7 @@ const Services = ({ className }: ServicesProps) => {
             assumenda blanditiis officia dolorum sequi excepturi rem obcaecati
           </p>
         </div>
-        <div className="flex w-[360px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px]">
+        <div className="flex w-[300px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px] xl:w-[360px]">
           <Image
             src={dummypicture3}
             alt="1"
@@ -70,7 +70,7 @@ const Services = ({ className }: ServicesProps) => {
             assumenda blanditiis officia dolorum sequi excepturi rem obcaecati
           </p>
         </div>
-        <div className="flex w-[360px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px]">
+        <div className="flex w-[300px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px] xl:w-[360px]">
           <Image
             src={dummypicture4}
             alt="1"
@@ -86,7 +86,7 @@ const Services = ({ className }: ServicesProps) => {
             assumenda blanditiis officia dolorum sequi excepturi rem obcaecati
           </p>
         </div>
-        <div className="flex w-[360px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px]">
+        <div className="flex w-[300px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px] xl:w-[360px]">
           <Image
             src={dummypicture3}
             alt="1"
@@ -102,7 +102,7 @@ const Services = ({ className }: ServicesProps) => {
             assumenda blanditiis officia dolorum sequi excepturi rem obcaecati
           </p>
         </div>
-        <div className="flex w-[360px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px]">
+        <div className="flex w-[300px] flex-col items-center rounded-bl-[100px] rounded-tr-[100px] xl:w-[360px]">
           <Image
             src={dummypicture7}
             alt="1"

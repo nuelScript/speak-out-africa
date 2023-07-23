@@ -66,9 +66,11 @@ export const DonationCard = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex h-[750px] w-[856px] flex-col gap-3 p-10 shadow-lg shadow-gray-400"
+        className="flex w-full flex-col gap-3 p-10 shadow-lg shadow-gray-400 xl:h-[750px] xl:w-[856px]"
       >
-        <h1 className="text-xl font-medium">Your Donation</h1>
+        <h1 className="text-center text-2xl font-medium xl:text-start xl:text-xl">
+          Your Donation
+        </h1>
         <Separator />
         <div className="mb-1">
           <div className="flex w-full flex-col gap-4">
@@ -79,7 +81,7 @@ export const DonationCard = () => {
                 <FormItem>
                   <FormControl>
                     <Input
-                      className="peer block w-[300px] appearance-none rounded-full bg-neutral-200 px-6 py-4 text-base font-light text-black focus:outline-none focus:ring-0"
+                      className="peer block w-full appearance-none rounded-full bg-neutral-200 px-6 py-4 text-base font-light text-black focus:outline-none focus:ring-0 xl:w-[300px]"
                       type="text"
                       id="Amount"
                       placeholder="Amount"
@@ -100,7 +102,7 @@ export const DonationCard = () => {
                     defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger className="w-[300px] rounded-full bg-black px-8 py-4 text-base font-semibold uppercase text-white">
+                      <SelectTrigger className="w-full rounded-full bg-black px-8 py-4 text-base font-semibold uppercase text-white xl:w-[300px]">
                         <SelectValue placeholder="Select your Currency" />
                       </SelectTrigger>
                     </FormControl>
@@ -119,7 +121,7 @@ export const DonationCard = () => {
         <Separator />
         <div className="flex w-full flex-col">
           <div className="flex flex-col gap-6">
-            <div className="flex w-full gap-16">
+            <div className="flex w-full flex-col gap-6 xl:flex-row xl:gap-16">
               <div className="w-full">
                 <FormField
                   control={form.control}
@@ -203,7 +205,7 @@ export const DonationCard = () => {
               100
             </span>
           </h1>
-          <div className="w-full">
+          <div className="mt-8 flex w-full justify-center xl:mt-0 xl:justify-start">
             <button
               type="submit"
               className="rounded-full bg-[#DC0A00] px-8 py-4 text-center text-xs font-bold uppercase tracking-tight text-gray-100"

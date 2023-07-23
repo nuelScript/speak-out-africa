@@ -9,7 +9,7 @@ const OurCampaignsPage = () => {
   return (
     <div className="min-h-full w-full">
       <Banner title="Our Campaigns" />
-      <div className="mb-28 flex w-full justify-center p-28">
+      <div className="mb-28 flex w-full justify-center p-4 xl:p-28">
         <CampaignCard />
       </div>
       <SupportUs className="mb-32" />

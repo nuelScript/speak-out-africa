@@ -108,7 +108,7 @@ const Footer = ({ className }: FooterProps) => {
       <Separator className="bg-neutral-400" />
       <div className="mb-4 mt-0 flex flex-col justify-between sm:h-3/5 sm:flex-row md:h-3/5 md:flex-row lg:h-3/5 lg:flex-row xl:mt-10">
         <div className="flex w-full flex-col items-center gap-x-2 sm:w-1/2 sm:items-start sm:gap-x-0 md:w-1/2 md:items-start md:gap-x-0 lg:w-1/2 lg:items-start lg:gap-x-0">
-          <Logo className="h-40 w-40 object-contain" />
+          <Logo className="object-contain" />
           <p className="mb-4 w-full text-center text-base sm:w-[75%] sm:text-left md:w-[70%] md:text-left lg:w-[65%] lg:text-left ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
             expedita at alias dolorem, quae corrupti blanditiis enim eius porro

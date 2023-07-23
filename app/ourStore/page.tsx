@@ -11,11 +11,11 @@ const OurStorePage = () => {
   return (
     <div className="min-h-full w-full">
       <Banner title="Our Store" />
-      <div className="flex min-h-fit w-full justify-center p-28">
+      <div className="flex w-full justify-center p-8 xl:p-28">
         <Book />
       </div>
       <div className="mb-32 flex flex-col gap-y-20">
-        <div className="flex w-full justify-center gap-8">
+        <div className="flex w-full flex-col justify-center gap-8 xl:flex-row">
           <StoreItem
             className="hover:scale-110 hover:cursor-pointer"
             image={Brainstorm}
@@ -32,7 +32,7 @@ const OurStorePage = () => {
             name="Book 3"
           />
         </div>
-        <div className="flex w-full justify-center gap-8">
+        <div className="flex w-full flex-col justify-center gap-8 xl:flex-row">
           <StoreItem
             className="hover:scale-110 hover:cursor-pointer"
             image={Brainstorm}

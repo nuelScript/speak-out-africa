@@ -15,24 +15,36 @@ import Image from "next/image";
 
 const GalleryCard = () => {
   return (
-    <Tabs defaultValue="all" className="w-[1200px]">
+    <Tabs defaultValue="all" className="w-fit xl:w-[1200px]">
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="all" className="uppercase">
+        <TabsTrigger
+          value="all"
+          className="text-xs font-bold uppercase xl:text-base xl:font-semibold"
+        >
           All
         </TabsTrigger>
-        <TabsTrigger value="activities" className="uppercase">
+        <TabsTrigger
+          value="activities"
+          className="text-xs font-bold uppercase xl:text-base xl:font-semibold"
+        >
           Activities
         </TabsTrigger>
-        <TabsTrigger value="research" className="uppercase">
+        <TabsTrigger
+          value="research"
+          className="text-xs font-bold uppercase xl:text-base xl:font-semibold"
+        >
           Research
         </TabsTrigger>
-        <TabsTrigger value="socials" className="uppercase">
+        <TabsTrigger
+          value="socials"
+          className="text-xs font-bold uppercase xl:text-base xl:font-semibold"
+        >
           Socials
         </TabsTrigger>
       </TabsList>
       <TabsContent value="all">
         <Card>
-          <CardContent className="grid grid-cols-2 gap-4 p-2  lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
+          <CardContent className="grid auto-rows-fr grid-cols-1 gap-4 p-2 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
             <Image
               src={dummypicture1}
               alt="picture1"
@@ -78,7 +90,7 @@ const GalleryCard = () => {
       </TabsContent>
       <TabsContent value="activities">
         <Card>
-          <CardContent className="grid grid-cols-2 gap-6 p-2  lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
+          <CardContent className="grid auto-rows-fr grid-cols-1 gap-6 p-2 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
             <Image
               src={dummypicture8}
               alt="picture1"
@@ -124,7 +136,7 @@ const GalleryCard = () => {
       </TabsContent>
       <TabsContent value="research">
         <Card>
-          <CardContent className="grid grid-cols-2 gap-6 p-2  lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
+          <CardContent className="grid auto-rows-fr grid-cols-1 gap-6 p-2 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
             <Image
               src={dummypicture1}
               alt="picture1"
@@ -170,7 +182,7 @@ const GalleryCard = () => {
       </TabsContent>
       <TabsContent value="socials">
         <Card>
-          <CardContent className="grid grid-cols-2 gap-6 p-2  lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
+          <CardContent className="grid auto-rows-fr grid-cols-1 gap-6 p-2 sm:grid-cols-2 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4">
             <Image
               src={dummypicture4}
               alt="picture1"

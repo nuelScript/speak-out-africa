@@ -8,7 +8,7 @@ const GalleryPage = () => {
   return (
     <div className="min-h-full w-full">
       <Banner title="Gallery" />
-      <div className="flex w-full justify-center p-28">
+      <div className="flex w-full justify-center p-4 xl:p-28">
         <GalleryCard />
       </div>
       <Footer />

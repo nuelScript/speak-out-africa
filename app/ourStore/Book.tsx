@@ -6,8 +6,8 @@ import { BsArrowDown } from "react-icons/bs";
 
 const Book = () => {
   return (
-    <div className="flex w-[1000px] gap-4">
-      <div className="flex w-1/2 items-center justify-center">
+    <div className="flex w-[1000px] flex-col gap-4 xl:flex-row">
+      <div className="flex w-full items-center justify-center xl:w-1/2">
         <Image
           src={Brainstorm}
           alt="Brainstorm"
@@ -16,9 +16,11 @@ const Book = () => {
           className=""
         />
       </div>
-      <div className="flex w-1/2 flex-col justify-center">
-        <h1 className="mb-4 text-xl font-medium">Lorem ipsum dolor sit amet</h1>
-        <p className="mb-4">
+      <div className="flex w-full flex-col items-center justify-center xl:w-1/2 xl:items-start">
+        <h1 className="mb-4 text-center text-3xl font-medium xl:text-start xl:text-xl">
+          Lorem ipsum dolor sit amet
+        </h1>
+        <p className="mb-4 text-center font-light xl:text-start">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           explicabo illo nisi, repudiandae, illum repellat optio repellendus
           atque impedit doloremque voluptatem praesentium ipsam omnis.

@@ -1,6 +1,6 @@
 "use client";
 
-import { dummypicture5, maps, woman } from "@/public/images";
+import { woman } from "@/public/images";
 import Banner from "../components/Banner/Banner";
 import Image from "next/image";
 import { MdOutlineLocationOn, MdOutlineEmail } from "react-icons/md";
@@ -45,7 +45,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-full w-full">
       <Banner title="Contact" />
-      <div className="my-20 flex w-full justify-center gap-48">
+      <div className="my-14 mb-20 flex w-full flex-col items-center justify-center gap-16 xl:my-20 xl:mb-0 xl:flex-row xl:items-start xl:gap-48">
         <Image
           src={woman}
           alt="photo"
@@ -54,12 +54,16 @@ const ContactPage = () => {
           className=" rounded-bl-lg rounded-tr-lg object-contain"
         />
         <div className="flex flex-col gap-4">
-          <h1 className="text-sm font-semibold uppercase text-neutral-500">
+          <h1 className="text-center text-xl font-semibold uppercase text-neutral-500 xl:text-start xl:text-sm">
             Contact Us
           </h1>
-          <h1 className="w-full text-6xl font-bold">Get In Touch With Us</h1>
-          <p className="text-xl font-medium">Visit Us</p>
-          <p>
+          <h1 className="w-full text-center text-3xl font-bold xl:text-start xl:text-6xl">
+            Get In Touch With Us
+          </h1>
+          <p className="text-center text-xl font-medium xl:text-start">
+            Visit Us
+          </p>
+          <p className="text-center xl:text-start">
             <MdOutlineLocationOn
               className="mr-4 inline-block text-[#DC0A00] hover:cursor-pointer"
               size={25}
@@ -68,8 +72,10 @@ const ContactPage = () => {
               No 7 Orba Road United kingdom, Nigeria
             </span>
           </p>
-          <p className="text-xl font-medium">Mail Us</p>
-          <p>
+          <p className="text-center text-xl font-medium xl:text-start">
+            Mail Us
+          </p>
+          <p className="text-center xl:text-start">
             <MdOutlineEmail
               className="mr-4 inline-block text-[#DC0A00] hover:cursor-pointer"
               size={25}
@@ -82,8 +88,10 @@ const ContactPage = () => {
               <span className="font-light">speakoutafrica@gmail.com</span>
             </Link>
           </p>
-          <p className="text-xl font-medium">Call Us</p>
-          <p>
+          <p className="text-center text-xl font-medium xl:text-start">
+            Call Us
+          </p>
+          <p className="text-center xl:text-start">
             <IoMdCall
               className="mr-4 inline-block text-[#DC0A00] hover:cursor-pointer"
               size={25}
@@ -102,11 +110,14 @@ const ContactPage = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="mb-10 flex w-full flex-col items-center"
       >
-        <div className="flex w-[1200px] flex-col gap-6">
-          <div className="flex w-full justify-start">
-            <p className="mb-6 text-xl font-medium"> Send us a message</p>
+        <div className="flex w-full flex-col gap-6 px-8 xl:w-[1200px] xl:px-0">
+          <div className="flex w-full justify-center xl:justify-start">
+            <p className="mb-6 text-3xl font-medium xl:text-xl">
+              {" "}
+              Send us a message
+            </p>
           </div>
-          <div className="flex w-full gap-16">
+          <div className="flex w-full flex-col gap-6 xl:flex-row xl:gap-16">
             <div className="w-full">
               <label
                 className="text-md mb-3 block font-medium text-zinc-900"
@@ -211,7 +222,7 @@ const ContactPage = () => {
               <span className="text-rose-500">{errors.message.message}</span>
             )}
           </div>
-          <div className="w-full">
+          <div className="flex w-full justify-center xl:justify-start">
             <button
               type="submit"
               className="rounded-full bg-[#DC0A00] px-8 py-3 text-xs font-semibold uppercase text-white"

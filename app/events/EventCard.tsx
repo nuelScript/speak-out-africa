@@ -7,8 +7,8 @@ import { MdOutlineLocationOn } from "react-icons/md";
 const EventCard = () => {
   return (
     <div className="flex">
-      <div className="flex w-full gap-10">
-        <div className="flex w-1/2 flex-col space-y-6">
+      <div className="flex w-full flex-col gap-10 xl:flex-row">
+        <div className="flex w-full flex-col space-y-6 p-8 xl:w-1/2 xl:p-0">
           <h1 className="mb-2 text-xl font-semibold">
             Give a child money today
           </h1>
@@ -29,7 +29,7 @@ const EventCard = () => {
             </p>
           </div>
         </div>
-        <div className="flex w-1/2">
+        <div className="flex w-full xl:w-1/2">
           <Image
             src={event}
             alt="Event"

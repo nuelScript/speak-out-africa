@@ -16,7 +16,7 @@ const OurEvents = () => {
         <h3 className="text-center text-4xl font-bold sm:text-center sm:text-4xl md:text-center md:text-5xl lg:text-left lg:text-6xl">
           Upcoming Events
         </h3>
-        <div className="flex flex-col items-center gap-y-8 px-20 pt-5 sm:flex-col sm:items-center sm:gap-y-8 md:flex-col md:items-center md:gap-y-8 lg:flex-row lg:justify-center">
+        <div className="flex flex-col items-center gap-y-8 p-4 pt-5 sm:flex-col sm:items-center sm:gap-y-8 md:flex-col md:items-center md:gap-y-8 lg:flex-row lg:justify-center lg:px-20">
           <div className="flex flex-col justify-center space-y-6 lg:w-1/2">
             <h1 className="mb-2 text-xl font-medium uppercase">
               Give a child money today

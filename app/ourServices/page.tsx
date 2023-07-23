@@ -10,7 +10,7 @@ const OurServicesPage = () => {
   return (
     <div className="min-h-full w-full">
       <Banner title="Our Services" />
-      <Services className="mb-20 mt-10" />
+      <Services className="xl:mb-20 xl:mt-10" />
       <WhyUs className="mb-20" />
       <SupportUs />
       <Footer />
